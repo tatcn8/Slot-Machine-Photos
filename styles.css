@@ -1,0 +1,131 @@
+body{
+    background-color: gray;
+}
+.button1{
+    font-size: x-large;
+    font-weight: bolder;
+    color:rgb(27, 53, 83);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid rgb(101, 158, 223);
+    background-color: gray
+}
+.image1{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+.image2{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+.image3{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+.image7{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+.image8{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+.image9{
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+.image4{
+    height: 50px;
+    width: 50px;
+}
+.image5{
+    height: 50px;
+    width: 50px;
+}
+.image6{
+    height: 50px;
+    width: 50px;
+}
+.column {
+    font-size: 50px;
+    background-color:white; 
+    color: black;
+    text-align: center;
+    float: left;
+    width: 33.33%;
+  }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .result1{
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    color: green;
+  }
+.result2{
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(185, 23, 23);
+  }
+.gameover{
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(185, 23, 23);
+  }
+ .winnermessage{
+  display: none;
+  font-size: 35px;
+  text-align: center;
+  color: green;
+}
+.youwin{
+    display: none;
+    color: green;
+  }
+  .youlose{
+    display: none;
+    color: red;
+  }
+  h1{
+    text-align: center;
+    color: rgb(27, 53, 83);
+  }
+  h2{ 
+    color: rgb(27, 53, 83);
+}
+.tokens{
+  display: block;
+  color: rgb(27, 53, 83);
+}
+.parent{
+    display: block;
+    border: 10px solid;
+    border-color: rgb(27, 53, 83);
+    background-color: rgb(51, 47, 47);
+    height: 50px;
+    width: 99%
+  }
+  .child{
+    line-height: 50px;
+    text-align:center;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(177, 128, 39);
+    height: 50px;
+    width: 50%;
+  }
+  p{
+    text-align: right;
+  }
