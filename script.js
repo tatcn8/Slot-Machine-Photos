@@ -61,7 +61,7 @@ function decreaseTokenValue(){
     }
 }
 function increaseTokenValue250(){
-    points += -200
+    points += 250
     tokens.innerHTML = points
     if (points > 0 && points < 2000 ){
         return tokens.innerHTML = points, tokens.style.color = 'green'
