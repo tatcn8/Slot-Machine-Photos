@@ -129,3 +129,26 @@ body{
   p{
     text-align: right;
   }
+  .siren1{
+    width: 50%;
+    float: right;
+}
+.siren2{
+    padding-top: 30px;
+    width: 50%;
+    float: left;
+}
+.image10{
+    height: 125px;
+    width: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0%;
+}
+.image11{
+    height: 70px;
+    width: 70px;
+    display: block;
+    margin-left: 0%;
+    margin-right: auto;
+}
