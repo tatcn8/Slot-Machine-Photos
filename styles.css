@@ -71,24 +71,28 @@ body{
     font-size: 35px;
     text-align: center;
     color: green;
+    transform: translate(0px, -100px);
   }
 .result2{
     display: none;
     font-size: 35px;
     text-align: center;
     color: rgb(185, 23, 23);
+    transform: translate(0px, -100px);
   }
 .gameover{
     display: none;
     font-size: 35px;
     text-align: center;
     color: rgb(185, 23, 23);
+    transform: translate(0px, -400px);
   }
  .winnermessage{
   display: none;
   font-size: 35px;
   text-align: center;
   color: green;
+  transform: translate(0px, -400px);
 }
 .youwin{
     display: none;
@@ -101,9 +105,11 @@ body{
   h1{
     text-align: center;
     color: rgb(27, 53, 83);
+    transform: translate(0px, 105px);
   }
   h2{ 
     color: rgb(27, 53, 83);
+    transform: translate(0px, -100px);
 }
 .tokens{
   display: block;
@@ -128,8 +134,10 @@ body{
   }
   p{
     text-align: right;
+    height: 300px;
+    transform: translate(0px, -100px);
   }
-  .siren1{
+.siren1{
     width: 50%;
     float: right;
 }
@@ -152,44 +160,20 @@ body{
     margin-left: 0%;
     margin-right: auto;
 }
-.container{
-    position:fixed;
-    top: 50%;
-    left: 10%;
-    width: 75%;
-    height: 145px;
-    font-weight: bold;
-    font-size: 25px;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    padding: 10px;
-    border: 1px solid black
+.scoreboardimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 325px;
+    transform: translate(0px, -160px);
 }
-.image12{
-  height: 50px;
-  width: 50px;
+.header{
+  transform: translate(0px, -100px);
 }
-.image13{
-  height: 50px;
-  width: 50px;
+.row{
+  transform: translate(0px, -100px);
 }
-.image14{
-  height: 50px;
-  width: 50px;
-}
-.image15{
-  height: 50px;
-  width: 50px;
-}
-.image16{
-  height: 50px;
-  width: 50px;
-}
-.image17{
-  height: 50px;
-  width: 50px;
-}
-.scoreboard1{
-  font-size: 30px;
+.slider{
+  transform: translate(0px, -100px);
 }

@@ -14,6 +14,7 @@ let youWin = document.querySelector('.youwin')
 let youLose = document.querySelector('.youlose')
 let slider = document.querySelector('.parent')
 let child = document.querySelector('.child')
+let scoreBoard = document.querySelector('.scoreboardimage')
 
 function randomPictureGenerator(){
     return object[Math.floor(Math.random() * object.length)]
@@ -36,7 +37,8 @@ function increaseTokenValue(){
     else if (points >= 2000){
         return youWin.style.display = "block", tokens.style.display = "none", 
         winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
-        loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none'
+        loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+        scoreBoard.style.display= "none"
     }
 }
 function decreaseTokenValue(){
@@ -48,7 +50,8 @@ function decreaseTokenValue(){
     else if (points <= 0){
         return youLose.style.display = "block", tokens.style.display = "none",
          gameOverMessage.style.display = "block", loserMessage.style.display = "none", 
-         winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none'
+         winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+         scoreBoard.style.display= "none"
     }
 }
 function lotteryResult(){
