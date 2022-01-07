@@ -35,15 +35,15 @@ Q & A + Feedback
 **SLOT-LAND GAME INTRODUCTION: My game is called "Slot-Land" and it is a slot machine game. When the user clicks the "pull" button, a slide bar moves across the screen which triggers 3 random photos (there are 6 total) to generate. If all three photos are equal to each other, then the tokens are incremented by 2000 and the game is over. If two consecutive photos are equal (i.e. the first and second, or second and third) a "jackpot!" message appears, and tokens are incremented by 250 and play continues. If neither of the above conditions are satisfied, a "Try Again!" message appears and tokens are decremented by 100. When score is zero, the game is over and you lose. When the score reaches 2000, the game is over and you win.
 
 **SCREENSHOTS: 
-☐ Initial screen ![Homescreen](images/Game Screenshots/Homesreen.png)
+☐ Initial screen ![Homescreen](images/Screenshots/Homesreen.png)
 
-☐ Jacpot Message ![Homescreen](images/Game Screenshots/Winner_message.png)
+☐ Jacpot Message ![Jackpot](images/Screenshots/Winner_message.png)
 
-☐ Loser Message ![Homescreen](images/Game Screenshots/Loser_message.png)
+☐ Loser Message ![TryAgain](images/Screenshots/Loser_message.png)
 
-☐ Game Over (winner) Message ![Homescreen](images/Game Screenshots/GameOver_winner.png)
+☐ Game Over (winner) Message ![Gameover_Winner](./images/Screenshots/GameOver_winner.png)
 
-☐ Game Over (loser) Message ![Homescreen](images/Game Screenshots/GameOver_loser.png)
+☐ Game Over (loser) Message ![Gameover_loser](./images/Screenshots/GameOver_loser.png)
 
 **TECHNOLOGIES USED: The game is basically a simple indexHTML file, styled with CSS, and made functional by JavaScript. Note: I thought about adding bootstrap, but since this is our first project, I thought it would be cool to have at least one app in my portfolio that was just simply HTML, CSS, and JS.
 
