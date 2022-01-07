@@ -28,8 +28,8 @@ function randomPicture2(){
 function randomPicture3(){
     randomPic3.src = randomPictureGenerator().src
 }
-function increaseTokenValue(){
-    points += 900
+function increaseTokenValue2000(){
+    points += 2000
     tokens.innerHTML = points
     if (points > 0 && points < 2000 ){
         return tokens.innerHTML = points, tokens.style.color = 'green'
@@ -54,13 +54,26 @@ function decreaseTokenValue(){
          scoreBoard.style.display= "none"
     }
 }
-function lotteryResult(){
-    if (randomPic1.src === randomPic2.src && randomPic1.src === randomPic3.src){
-        return winnerMessage.style.display = "block", loserMessage.style.display = "none", increaseTokenValue()
+function increaseTokenValue250(){
+    points += 400
+    tokens.innerHTML = points
+    if (points > 0 && points < 2000 ){
+        return tokens.innerHTML = points, tokens.style.color = 'green'
     }
-    else {
+    else if (points >= 2000){
+        return youWin.style.display = "block", tokens.style.display = "none", 
+        winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
+        loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+        scoreBoard.style.display= "none"
+    }
+}
+function lotteryResult(){
+    if (randomPic1.src === randomPic2.src && randomPic1.src === randomPic3.src)
+        return winnerMessage.style.display = "block", loserMessage.style.display = "none", increaseTokenValue2000()
+    if (randomPic1.src === randomPic2.src || randomPic2.src === randomPic3.src)
+        return winnerMessage.style.display = "block", loserMessage.style.display = "none", increaseTokenValue250()
+    else 
         return loserMessage.style.display = "block", winnerMessage.style.display = "none", decreaseTokenValue()
-    } 
 }
 function lotteryFunction(){
     randomPicture()

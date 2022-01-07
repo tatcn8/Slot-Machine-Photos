@@ -98,16 +98,16 @@ body{
     display: none;
     color: green;
   }
-  .youlose{
+.youlose{
     display: none;
     color: red;
   }
-  h1{
+h1{
     text-align: center;
     color: rgb(27, 53, 83);
     transform: translate(0px, 105px);
   }
-  h2{ 
+h2{ 
     color: rgb(27, 53, 83);
     transform: translate(0px, -100px);
 }
@@ -123,7 +123,7 @@ body{
     height: 50px;
     width: 99%
   }
-  .child{
+.child{
     line-height: 50px;
     text-align:center;
     font-weight: bold;
@@ -132,7 +132,7 @@ body{
     height: 50px;
     width: 50%;
   }
-  p{
+ p{
     text-align: right;
     height: 300px;
     transform: translate(0px, -100px);
@@ -176,4 +176,7 @@ body{
 }
 .slider{
   transform: translate(0px, -100px);
+}
+.winparameter{
+  transform: translate(520px, 0px);
 }
