@@ -28,6 +28,18 @@ function randomPicture2(){
 function randomPicture3(){
     randomPic3.src = randomPictureGenerator().src
 }
+function youWinMessage(){
+    return youWin.style.display = "block", tokens.style.display = "none", 
+    winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
+    loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+    scoreBoard.style.display= "none"
+}
+function youLoseMessage(){
+    return youLose.style.display = "block", tokens.style.display = "none",
+    gameOverMessage.style.display = "block", loserMessage.style.display = "none", 
+    winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+    scoreBoard.style.display= "none"
+}
 function increaseTokenValue2000(){
     points += 2000
     tokens.innerHTML = points
@@ -35,10 +47,7 @@ function increaseTokenValue2000(){
         return tokens.innerHTML = points, tokens.style.color = 'green'
     }
     else if (points >= 2000){
-        return youWin.style.display = "block", tokens.style.display = "none", 
-        winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
-        loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-        scoreBoard.style.display= "none"
+        return youWinMessage()
     }
 }
 function decreaseTokenValue(){
@@ -48,23 +57,17 @@ function decreaseTokenValue(){
         return tokens.innerHTML = points, tokens.style.color = 'red'
     }
     else if (points <= 0){
-        return youLose.style.display = "block", tokens.style.display = "none",
-         gameOverMessage.style.display = "block", loserMessage.style.display = "none", 
-         winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-         scoreBoard.style.display= "none"
+        return youLoseMessage()
     }
 }
 function increaseTokenValue250(){
-    points += 250
+    points += -200
     tokens.innerHTML = points
     if (points > 0 && points < 2000 ){
         return tokens.innerHTML = points, tokens.style.color = 'green'
     }
     else if (points >= 2000){
-        return youWin.style.display = "block", tokens.style.display = "none", 
-        winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
-        loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-        scoreBoard.style.display= "none"
+        return youWinMessage()
     }
 }
 function lotteryResult(){

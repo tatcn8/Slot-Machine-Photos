@@ -88,11 +88,11 @@ body{
     transform: translate(0px, -400px);
   }
  .winnermessage{
-  display: none;
-  font-size: 35px;
-  text-align: center;
-  color: green;
-  transform: translate(0px, -400px);
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    color: green;
+    transform: translate(0px, -400px);
 }
 .youwin{
     display: none;
@@ -169,14 +169,14 @@ h2{
     transform: translate(50px, -160px);
 }
 .header{
-  transform: translate(0px, -100px);
+    transform: translate(0px, -100px);
 }
 .row{
-  transform: translate(0px, -100px);
+    transform: translate(0px, -100px);
 }
 .slider{
-  transform: translate(0px, -100px);
+    transform: translate(0px, -100px);
 }
 .winparameter{
-  transform: translate(520px, 0px);
+    transform: translate(520px, 0px);
 }
