@@ -166,7 +166,7 @@ h2{
     margin-right: auto;
     width: 50%;
     height: 325px;
-    transform: translate(0px, -160px);
+    transform: translate(50px, -160px);
 }
 .header{
   transform: translate(0px, -100px);
