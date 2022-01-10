@@ -1,4 +1,4 @@
-let object = [document.querySelector('.image1'),document.querySelector('.image2'),document.querySelector('.image3'),document.querySelector('.image7'),document.querySelector('.image8'),document.querySelector('.image9'),]
+let object = [document.querySelector('.image1'), document.querySelector('.image2'), document.querySelector('.image3'), document.querySelector('.image7'), document.querySelector('.image8'), document.querySelector('.image9'), ]
 let randomPic1 = document.querySelector(".image4")
 let randomPic2 = document.querySelector(".image5")
 let randomPic3 = document.querySelector(".image6")
@@ -15,86 +15,102 @@ let youLose = document.querySelector('.youlose')
 let slider = document.querySelector('.parent')
 let child = document.querySelector('.child')
 let scoreBoard = document.querySelector('.scoreboardimage')
+let restart = document.querySelector('.restartbutton1')
 
-function randomPictureGenerator(){
+restart.addEventListener('click', ()=>{
+    return youLose.style.display = "none", tokens.style.display = "block",
+    gameOverMessage.style.display = "none", loserMessage.style.display = "none",
+    winnerMessage.style.display = "none", button.style.display = "block", slider.style.display = 'block',
+    scoreBoard.style.display = "block", restart.style.display = "none"
+})
+function randomPictureGenerator() {
     return object[Math.floor(Math.random() * object.length)]
 }
-function randomPicture(){
+
+function randomPicture() {
     randomPic1.src = randomPictureGenerator().src
 }
-function randomPicture2(){
+
+function randomPicture2() {
     randomPic2.src = randomPictureGenerator().src
 }
-function randomPicture3(){
+
+function randomPicture3() {
     randomPic3.src = randomPictureGenerator().src
 }
-function youWinMessage(){
-    return youWin.style.display = "block", tokens.style.display = "none", 
-    winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
-    loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-    scoreBoard.style.display= "none"
+
+function youWinMessage() {
+    return youWin.style.display = "block", tokens.style.display = "none",
+        winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
+        loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+        scoreBoard.style.display = "none", restart.style.display = "block"
 }
-function youLoseMessage(){
+
+function youLoseMessage() {
     return youLose.style.display = "block", tokens.style.display = "none",
-    gameOverMessage.style.display = "block", loserMessage.style.display = "none", 
-    winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-    scoreBoard.style.display= "none"
+        gameOverMessage.style.display = "block", loserMessage.style.display = "none",
+        winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
+        scoreBoard.style.display = "none", restart.style.display = "block"
 }
-function increaseTokenValue2000(){
+
+function increaseTokenValue2000() {
     points += 2000
     tokens.innerHTML = points
-    if (points > 0 && points < 2000 ){
+    if (points > 0 && points < 2000) {
         return tokens.innerHTML = points, tokens.style.color = 'green'
-    }
-    else if (points >= 2000){
+    } else if (points >= 2000) {
         return youWinMessage()
     }
 }
-function decreaseTokenValue(){
-    points += -100
+
+function decreaseTokenValue() {
+    points += -1000
     tokens.innerHTML = points
-    if (points > 0 && points < 2000){
+    if (points > 0 && points < 2000) {
         return tokens.innerHTML = points, tokens.style.color = 'red'
-    }
-    else if (points <= 0){
+    } else if (points <= 0) {
         return youLoseMessage()
     }
 }
-function increaseTokenValue250(){
-    points += 250
+
+function increaseTokenValue250() {
+    points += 2000
     tokens.innerHTML = points
-    if (points > 0 && points < 2000 ){
+    if (points > 0 && points < 2000) {
         return tokens.innerHTML = points, tokens.style.color = 'green'
-    }
-    else if (points >= 2000){
+    } else if (points >= 2000) {
         return youWinMessage()
     }
 }
-function lotteryResult(){
+
+function lotteryResult() {
     if (randomPic1.src === randomPic2.src && randomPic1.src === randomPic3.src)
         return winnerMessage.style.display = "block", loserMessage.style.display = "none", increaseTokenValue2000()
     if (randomPic1.src === randomPic2.src || randomPic2.src === randomPic3.src)
         return winnerMessage.style.display = "block", loserMessage.style.display = "none", increaseTokenValue250()
-    else 
+    else
         return loserMessage.style.display = "block", winnerMessage.style.display = "none", decreaseTokenValue()
 }
-function lotteryFunction(){
+
+function lotteryFunction() {
     randomPicture()
     setTimeout(randomPicture2, 250)
     setTimeout(randomPicture3, 500)
     setTimeout(lotteryResult, 500)
 }
-function translateChild(){
+
+function translateChild() {
     return child.style.transform = 'translateX(100%)', child.style.transition = "1s"
 }
-function stopTranslate(){
+
+function stopTranslate() {
     return child.style.transform = 'translateX(0%)', child.style.transition = 'none'
 }
-button.addEventListener("click", ()=>{
+button.addEventListener("click", () => {
     winnerMessage.style.display = "none", loserMessage.style.display = "none"
     translateChild()
     setTimeout(stopTranslate, 1650)
 })
-slider.addEventListener('transitionend', ()=>{
-    lotteryFunction() 
+slider.addEventListener('transitionend', () => {
+    lotteryFunction()
 })
