@@ -15,17 +15,7 @@ let youLose = document.querySelector('.youlose')
 let slider = document.querySelector('.parent')
 let child = document.querySelector('.child')
 let scoreBoard = document.querySelector('.scoreboardimage')
-let restart = document.querySelector('.restartbutton1')
 
-restart.addEventListener('click', ()=>{
-    let points = 1000
-    tokens.innerHTML = 1000 
-    return youLose.style.display = "none", tokens.style.display = "block",
-    gameOverMessage.style.display = "none", loserMessage.style.display = "none",
-    winnerMessage.style.display = "none", button.style.display = "block", slider.style.display = 'block',
-    scoreBoard.style.display = "block", restart.style.display = "none", tokens.style.color = "rgb(27, 53, 83)",
-    winnerMessage1.style.display = 'none'
-})
 function randomPictureGenerator() {
     return object[Math.floor(Math.random() * object.length)]
 }
@@ -46,14 +36,14 @@ function youWinMessage() {
     return youWin.style.display = "block", tokens.style.display = "none",
         winnerMessage1.style.display = "block", winnerMessage.style.display = "none",
         loserMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-        scoreBoard.style.display = "none", restart.style.display = "block"
+        scoreBoard.style.display = "none"
 }
 
 function youLoseMessage() {
     return youLose.style.display = "block", tokens.style.display = "none",
         gameOverMessage.style.display = "block", loserMessage.style.display = "none",
         winnerMessage.style.display = "none", button.style.display = "none", slider.style.display = 'none',
-        scoreBoard.style.display = "none", restart.style.display = "block"
+        scoreBoard.style.display = "none"
 }
 
 function increaseTokenValue2000() {
@@ -67,7 +57,7 @@ function increaseTokenValue2000() {
 }
 
 function decreaseTokenValue() {
-    points += -500
+    points += -100
     tokens.innerHTML = points
     if (points > 0 && points < 2000) {
         return tokens.innerHTML = points, tokens.style.color = 'red'
@@ -77,7 +67,7 @@ function decreaseTokenValue() {
 }
 
 function increaseTokenValue250() {
-    points += 500
+    points += 250
     tokens.innerHTML = points
     if (points > 0 && points < 2000) {
         return tokens.innerHTML = points, tokens.style.color = 'green'
@@ -117,3 +107,4 @@ button.addEventListener("click", () => {
 slider.addEventListener('transitionend', () => {
     lotteryFunction()
 })
+
